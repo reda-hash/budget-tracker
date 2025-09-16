@@ -7,9 +7,7 @@ from datetime import date
 import tempfile
 import shutil
 
-# -----------------------
 # File Handling (Absolute Path)
-# -----------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, "expenses.json")
 
@@ -38,9 +36,7 @@ def load_data():
     return data
 
 
-# -----------------------
 # Expense Tracker Logic
-# -----------------------
 def add_expense(amount, category, exp_date):
     data = load_data()
     data.append({
@@ -56,9 +52,7 @@ def get_expenses_df():
         return pd.DataFrame(columns=["date", "category", "amount"])
     return pd.DataFrame(data)
 
-# -----------------------
 # Streamlit UI
-# -----------------------
 st.set_page_config(page_title="Budget Tracker", layout="wide")
 st.title("💰 Budget Tracker")
 
@@ -77,9 +71,7 @@ else:
 menu = ["Add Expense", "View Expenses", "Analytics Dashboard"]
 choice = st.sidebar.radio("📌 Navigation", menu)
 
-# -----------------------
 # Add Expense Form
-# -----------------------
 if choice == "Add Expense":
     st.header("➕ Add a New Expense")
 
@@ -101,9 +93,7 @@ if choice == "Add Expense":
             add_expense(amount, category, exp_date)
             st.success("✅ Expense Added Successfully!")
 
-# -----------------------
 # View Expenses
-# -----------------------
 elif choice == "View Expenses":
     st.header("📋 Expense History")
 
@@ -113,9 +103,8 @@ elif choice == "View Expenses":
     else:
         st.dataframe(df)
 
-# -----------------------
+
 # Analytics Dashboard
-# -----------------------
 elif choice == "Analytics Dashboard":
     st.header("📊 Analytics Dashboard")
 
