@@ -1,32 +1,40 @@
-# 💰 Mini Budget Tracker with Analytics Dashboard  
+# 💰 Budget Tracker
 
-A budgeting application with expense tracking, history logs, and interactive analytics dashboards built using **Python**, **Streamlit**, and **Plotly**.  
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.0+-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This project demonstrates both technical ability and **IT project coordination** skills, including **Agile project planning**, **documentation**, **stakeholder communication**, and **progress tracking**.  
-
----
-
-## 🚀 Features  
-- **Expense recording** with categories and history logs.  
-- **Analytics dashboard** with charts and spending insights.  
-- **Agile delivery** with backlog, user stories, and sprint goals.  
-- Clear **documentation** including requirements, diagrams, and user guide.  
+A simple **budget tracking web app** built with [Streamlit](https://streamlit.io/).  
+Track your daily expenses, visualize spending trends, and manage your budget with ease.
 
 ---
 
-## 🔑 Skills Demonstrated  
-- **IT Project Coordination** – managed backlog, planned sprints, and tracked progress.  
-- **Project Planning & Documentation** – produced requirements, diagrams, and test reports.  
-- **Stakeholder Communication** – structured outputs as if presenting to end-users.  
-- **Successful Delivery** – completed the project **ahead of schedule** in a **fast-paced environment**.  
+## ✨ Features
+- ➕ Add and view expenses
+- 📋 Interactive expense history
+- 📊 Analytics dashboard:
+  - Spending by category (pie chart)
+  - Spending over time (line chart)
+  - Top 3 spending categories
+- 💾 Persistent JSON storage (local file)
 
 ---
 
-## ⚙️ Installation  
+## 🚀 Getting Started (Local)
 
-Clone the repository and install dependencies:  
+### 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/budget-tracker.git
 cd budget-tracker
-pip install -r requirements.txt
+
+---
+
+ Quick Start
+
+If you just want to try the app right away, you can run everything in one go:
+
+```bash
+git clone https://github.com/yourusername/budget-tracker.git && \
+cd budget-tracker && \
+pip install -r requirements.txt && \
 streamlit run app.py
